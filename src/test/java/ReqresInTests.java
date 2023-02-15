@@ -1,13 +1,11 @@
-
 import lombok.CreateUser;
 import lombok.UserData;
 import org.junit.jupiter.api.Test;
+
 import static io.restassured.RestAssured.given;
-import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 
 public class ReqresInTests {
@@ -33,7 +31,6 @@ public class ReqresInTests {
     }
 
 
-
     @Test
     public void getUserWithLombok() {
         UserData data = Specs.request
@@ -50,7 +47,7 @@ public class ReqresInTests {
     }
 
     @Test
-    void checkEmail() {
+    public void checkEmail() {
         given()
                 .spec(Specs.request)
                 .when()
